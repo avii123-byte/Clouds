@@ -85,7 +85,7 @@ namespace Mars.Clouds.Cmdlets
             this.NudgeX = [ 0.0 ];
             this.NudgeY = [0.0];
             this.FallbackDate = null;
-            this.RepairClassification = true;
+            this.RepairClassification = false;
             this.RepairReturn = false;
             this.ScannerUnit = Constant.Crs.LinearUnitMeter;
         }
