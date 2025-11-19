@@ -48,12 +48,12 @@ namespace Mars.Clouds.Cmdlets
 
         [Parameter(HelpMessage = "Translation to apply in the x direction relative to the specified latitude and longitude. Units are in the coordinate system specified by -HorizontalEpsg.")]
         [ValidateNotNullOrEmpty]
-        [ValidateRange(-100.0F, 100.0F)]
+        [ValidateRange(-1000.0F, 1000.0F)]
         public double[] NudgeX { get; set; }
 
         [Parameter(HelpMessage = "Translation to apply in the y direction relative to the specified latitude and longitude. Units are in the coordinate system specified by -HorizontalEpsg.")]
         [ValidateNotNullOrEmpty]
-        [ValidateRange(-100.0F, 100.0F)]
+        [ValidateRange(-1000.0F, 1000.0F)]
         public double[] NudgeY { get; set; }
 
         [Parameter(HelpMessage = "Fallback date to use if header is missing year or day of year information.")]
