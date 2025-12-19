@@ -149,8 +149,8 @@ namespace Mars.Clouds.Cmdlets
                     {
                         Debug.Assert(cloudCrs.GetLinearUnits() == Constant.Gdal.LinearUnitFoot);
                         cellSizeInCrsUnits = Double.IsNaN(this.CellSize) ? 2.0F / 12.0F : this.CellSize; // 2.0 inches
-                        maxHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 6.0F : this.MaxHeight;
-                        minHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 4.5F : this.MinHeight;
+                        maxHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 5.0F : this.MaxHeight;
+                        minHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 4.0F : this.MinHeight;
                     }
 
                     // extract slice
