@@ -37,11 +37,11 @@ namespace Mars.Clouds.Cmdlets
         [ValidateRange(-100.0, 400.0)] // sanity bounds
         public double CellSize { get; set; }
 
-        [Parameter(HelpMessage = "Minimum height of slice to extract in point cloud and DTM units. Default is 1.37 m for metric inputs and 4.5 feet for English inputs.")]
+        [Parameter(HelpMessage = "Minimum height of slice to extract in point cloud and DTM units. Default is 1.2192 m for metric inputs and 4.0 feet for English inputs.")]
         [ValidateRange(-100.0, 400.0)] // sanity bounds
         public double MinHeight { get; set; }
 
-        [Parameter(HelpMessage = "Maximum height of slice to extract in point cloud and DTM units. Default is 2.0 m for metric inputs and 6.0 feet for English inputs.")]
+        [Parameter(HelpMessage = "Maximum height of slice to extract in point cloud and DTM units. Default is 1.524 m for metric inputs and 5.0 feet for English inputs.")]
         [ValidateRange(-100.0, 400.0)] // sanity bounds
         public double MaxHeight { get; set; }
 
@@ -142,8 +142,8 @@ namespace Mars.Clouds.Cmdlets
                     if (cloudCrs.GetLinearUnits() == Constant.Gdal.LinearUnitMeter)
                     {
                         cellSizeInCrsUnits = Double.IsNaN(this.CellSize) ? 0.05F : this.CellSize; // 5 cm
-                        maxHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 2.0F : this.MaxHeight;
-                        minHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 1.37F : this.MinHeight;
+                        maxHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 1.524F : this.MaxHeight;
+                        minHeightInCrsUnits = Double.IsNaN(this.MaxHeight) ? 1.2192F : this.MinHeight;
                     }
                     else
                     {
